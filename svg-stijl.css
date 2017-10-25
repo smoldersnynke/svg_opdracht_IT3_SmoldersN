@@ -1,0 +1,109 @@
+#achtergrondN1{
+  max-width: 16%;
+  margin-left: 2%;
+}
+#achtergrondN2{
+  fill: rgb(66, 244, 232);
+  max-width: 16%;
+margin-left: 2%;
+}
+#achtergrondN3{
+  fill: rgb(65, 244, 125);
+  max-width: 16%;
+  margin-left: 2%;
+}#achtergrondN4{
+  fill: rgb(65, 157, 244);
+  max-width: 16%;
+  margin-left: 2%;
+}#achtergrondN5{
+  fill: rgb(244, 65, 184);
+  max-width: 16%;
+  margin-left: 2%;
+}
+
+h1 {
+  font-size: 2em;
+text-align: center;
+}
+#intro {
+margin: 50px auto;
+max-width: 100%;
+
+}
+#intro > img {
+  max-width: 50%;
+  margin: 30px auto;
+  display: block;
+
+}
+h2 {
+text-align: justify;
+}
+#uitleg {
+  width: 80%;
+  margin: auto;
+}
+#mijnWerk {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+#mijnWerk > img {
+  max-width:100%;
+  margin: 10px auto;
+  display: block;
+}
+#mijnWerk > h1 {
+  margin-bottom: 20px;
+}
+header {
+  margin: auto;
+  max-width: 100%;
+
+  justify-content: space-between;
+}
+/*mijn media query*/
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 600px) {
+    #mijnWerk {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+    }
+    #mijnWerk > h1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    #intro > img {
+      width: 30%;
+    }
+    h1 {
+      font-size: 3em;
+    }
+  }
+    @media screen and (min-width: 1000px) {
+      #mijnWerk {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      #mijnWerk > h1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      #uitleg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
+      }
+      #intro > img {
+        width: 20%;
+      }
+      h1 {
+        font-size: 4em;
+      }
+
+    }
+
+
+}
